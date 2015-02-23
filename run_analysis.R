@@ -77,3 +77,6 @@ averagedata<- arrange(averagedata, subjectID, activityNum)
 newave<- paste("ave", colnames(averagedata), sep=".")
 setnames(averagedata, colnames(averagedata[4:ncol(averagedata)]),
          newave[4:length(newave)])
+
+## submit assignment by writing table
+write.table(averagedata, file= "./averagedata.txt", row.names= FALSE)
