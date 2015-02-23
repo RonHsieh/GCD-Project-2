@@ -1,15 +1,15 @@
-* Code Book - analysis.R
+# Code Book - analysis.R
 
 This code book describe how the data cleaning process performed for the raw dataset, which was under the instruction of Coursera Getting and Cleaning Data course offered by prof. Roger Peng and DSS staff.
 
-** Original Data Sources
+## Original Data Sources
 [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip] (UCI HAR Dataset)
 - Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
 The file was processed by the script “run_analysis.R” with R functions to access instructions described in README.md.
 
 
-** File list from the raw dataset
+## File list from the raw dataset
 
 - 'README.txt'
 
@@ -37,7 +37,7 @@ The following files are available for the train and test data. Their description
 
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
 
-** Activities Lables
+## Activities Lables
 - 1. WALKING
 - 2. WALKING_UPSTAIRS
 - 3. WALKING_DOWNSTAIRS
@@ -45,7 +45,7 @@ The following files are available for the train and test data. Their description
 - 5. STANDING
 - 6. LAYING
 
-** Features Info
+## Features Info
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz.
 
@@ -74,14 +74,14 @@ fBodyAccJerkMag
 fBodyGyroMag
 fBodyGyroJerkMag
 
-** Handling Variables
+## Handling Variables
 
 For run_analysis.R file, we only focus on following 2 variable from the raw dataset.
 
 mean(): Mean value
 std(): Standard deviation
 
-** The Clean Dataset
+## The Clean Dataset
 
-The clean dataset “averagedata.txt”, or the output file from run_analysis.R, display the total average values of each subject in certain activity groups.
+The clean dataset **averagedata.txt**, or the output file from run_analysis.R, display the total average values of each subject in certain activity groups.
 You can use read.table() function in R to access the whole dataset.
